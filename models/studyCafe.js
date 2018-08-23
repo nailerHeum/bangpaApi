@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 
     },
     tel:{
-      
+
     },
     created_at: {
       type: DataTypes.DATE,
@@ -33,5 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     timestamps: false,
+    charset: 'utf8',
+    collate: 'utf8_general_ci',
   });
 };
