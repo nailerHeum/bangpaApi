@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('party', {
+  return sequelize.define('studyRoom', {
     // CREATE TABLE `bangpa_schema`.`user` (
 //   `id` INT UNSIGNED NOT NULL,
 //   `name` VARCHAR(45) NULL,
@@ -17,38 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    title: {
-      type: DataTypes.TEXT(medium),
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.TEXT(long),
-      allowNull: false,
-    },
-    area: {
-      type: DataTypes.TEXT(medium),
-      allowNull: false,
-    },
-    day: {
-      type: DataTypes.TEXT(medium),
-      allowNull: false,
-    },
-    studyPerWeek: {
-      type: DataTypes.TEXT(medium),
-      allowNull: false,
-    },
-    peopleNum: {
-      type: DataTypes.INTEGER(2),
-      allowNull: false,
-    },
-    peopleJob: {
-      type: DataTypes.TEXT(medium),
-      allowNull: false,
-    },
-    term: {
-      type: DataTypes.TEXT(long),
-      allowNull: false,
-    },
+    
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,

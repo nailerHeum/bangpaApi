@@ -1,30 +1,35 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('studyCafe', {
+    // CREATE TABLE `bangpa_schema`.`studycafe` (
+    //   `id` INT UNSIGNED NOT NULL,
+    //   `notice` LONGTEXT NOT NULL,
+    //   `address` LONGTEXT NOT NULL,
+    //   `description` LONGTEXT NOT NULL,
+    //   PRIMARY KEY (`id`))
+    //  ENGINE = InnoDB
+    //  DEFAULT CHARACTER SET = utf8
+    //  COMMENT = ‘스터디 카페 (업자들)’;
     id : {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER(11).UNSIGNED,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true,
     },
     notice: {
-      // 하나만 갖고 수정하는거면 여기 맞고 아니라면 빼야 함
+      type: DataTypes.TEXT(long),
+      allowNull: false,
     },
     address: {
-
-    },
-    image: {
-
-    },
-    hashtag: {
-        // 따로 모델 만들어야 할 가능성 높음
-    },
-    rating: {
-        // 따로 모델 만들어야함
+      type: DataTypes.TEXT(long),
+      allowNull: false,
     },
     description: {
-
+      type: DataTypes.TEXT(long),
+      allowNull: false,
     },
-    tel:{
-
+    tel: {
+      type: DataTypes.TEXT(medium),
+      allowNull: false,
     },
     created_at: {
       type: DataTypes.DATE,
